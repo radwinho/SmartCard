@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .navbar-nav li a{
+    color: #ffcb16 !important;
+    }
+nav .navbar-nav li a:hover{
+        color: white !important;
+        }
+.home-margin{
+    margin-top: 50px;
+}    
+
+.img-th{
+    width: 50px!important;
+    height: 50px!important;
+}
+
+.my-log{
+    background-color: #2c2c2c !important;
+}
+
+.my-log .dropdown-item:hover{
+    background-color:#2c2c2c;
+    color: white !important;
+}
+
+.social-links{
+    transition: 0.5s;
+}
+.social-links:hover{
+    transform: translateY(-5px);
+}
+
+.my-card
+{
+    max-width: 18rem;
+}
+
+
+
+
+
+@media only screen and (max-width: 450px)
+    {
+        .social-links{
+            transition: 0.5s!important;
+        }
+        .social-links:hover{
+            transform: translateY(0px)!important;
+        }
+        
+        .my-card
+        {
+            max-width: 100%;
+        }
+    }
