@@ -1,0 +1,39 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.526d0b56.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app.ac080ee2.css"
+    ]
+  },
+  "resources/js/vcard.js": {
+    "file": "assets/vcard.06af2a2b.js",
+    "src": "resources/js/vcard.js",
+    "isEntry": true
+  },
+  "resources/js/validate.js": {
+    "file": "assets/validate.88930c2e.js",
+    "src": "resources/js/validate.js",
+    "isEntry": true
+  },
+  "resources/js/editVcard.js": {
+    "file": "assets/editVcard.0f411c30.js",
+    "src": "resources/js/editVcard.js",
+    "isEntry": true
+  },
+  "resources/js/dashboard.js": {
+    "file": "assets/dashboard.238713da.js",
+    "src": "resources/js/dashboard.js",
+    "isEntry": true
+  },
+  "resources/js/profile.js": {
+    "file": "assets/profile.a3fd9890.js",
+    "src": "resources/js/profile.js",
+    "isEntry": true
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.ac080ee2.css",
+    "src": "resources/js/app.css"
+  }
+}
