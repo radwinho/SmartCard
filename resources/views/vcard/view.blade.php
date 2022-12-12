@@ -7,13 +7,20 @@
                 @if ($vcard->image)
                     <img src="{{asset('images/vcards/'.$vcard->image)}}" class="card-img-top" alt="image">
                 @else
-                    <img src="{{asset('images/vcards/no-image.png')}}" class="card-img-top" alt="vcard img">
+                    {{-- <img src="{{asset('images/icons/Asset1.png')}}" class="card-img-top" alt="vcard img"> --}}
+                    <div class="mx-auto">
+                        <i class="bi bi-camera text-{{$text}}" style="font-size: 120px"></i>
+                    </div>   
+                    
                 @endif
                 <div class="card-body">
                     <div class="text-{{$text}} text-center mb-2">
                         <span class="fw-bold d-block fs-5">{{$vcard->name}}</span>
                         @if ($vcard->title)
                         <span class="d-block">{{$vcard->title}}</span>
+                        @endif
+                        @if ($vcard->Organization_name)
+                        <span class="d-block">{{$vcard->Organization_name}}</span>
                         @endif
                     </div>
                     {{-- color  #dcdcdc" --}}
@@ -27,35 +34,83 @@
                         @foreach ($websites as $website)
                                 @if ($website['type'] == 'Facebook')
                                 <div class="p-2 col-3 text-center bd-highlight">
-                                    <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-facebook"></i></a>
+                                    <a
+                                    @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                        href="{{$website['url']}}"
+                                    @else    
+                                        href="https://{{$website['url']}}"
+                                    @endif
+                                target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-facebook"></i></a>
                                 </div>
                                     @elseif($website['type'] == 'Instagram' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-instagram"></i></a>
+                                        <a 
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                            href="{{$website['url']}}"
+                                        @else    
+                                            href="https://{{$website['url']}}"
+                                        @endif
+                                          target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-instagram"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'Linkedin' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-linkedin"></i></a>
+                                        <a 
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'Twitter' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-twitter"></i></a>
+                                        <a 
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-twitter"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'Snapchat' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-snapchat"></i></a>
+                                        <a
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-snapchat"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'TikTok' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-tiktok"></i></a>
+                                        <a 
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-tiktok"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'GoogleMaps' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-geo-alt"></i></a>
+                                        <a
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-geo-alt"></i></a>
                                     </div>
                                     @elseif($website['type'] == 'WhatsApp' )    
                                     <div class="p-2 col-3 text-center bd-highlight">
-                                        <a href="{{$website['url']}}"  target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-whatsapp"></i></a>
+                                        <a
+                                        @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                                href="{{$website['url']}}"
+                                        @else    
+                                                href="https://{{$website['url']}}"
+                                        @endif
+                                        target="_blank" class="card-link link-{{$text}} fs-1 d-inline-block social-links"><i class="bi bi-whatsapp"></i></a>
                                     </div>
                                     @endif
                             @endforeach
@@ -69,10 +124,6 @@
                         </div>
                     @endif
 
-                    @if ($vcard->Organization_name)
-                        <div class="fw-bold fs-4"><i class="bi bi-building"></i> {{$vcard->Organization_name}}</div>
-                    @endif
-                   
                     @if ($vcard->birthday)                    
                         <div class="mb-3 fw-bold fs-6"><i class="bi bi-calendar2-day"></i> {{$vcard->birthday}}</div>
                     @endif
@@ -104,10 +155,17 @@
                             @if ($state)
                                 <div id="site" class="mb-3">
                                     <span class="fw-bold"><i class="bi bi-globe"></i> Websites</span>
-                                    @foreach ($websites as $website)
+                                   @foreach ($websites as $website)
                                         @if ($website['type'] == 'Website' || $website['type'] == "Other")
                                         <div>
-                                            {{$website['type']}} <a class="link-{{$text}}" href="{{$website['url']}}" target="_blank">{{$website['url']}}</a>
+                                            {{$website['type']}}
+                                            <a class="link-{{$text}}"
+                                            @if (str_contains($website['url'],'https') || str_contains($website['url'],'http'))
+                                                href="{{$website['url']}}"
+                                            @else    
+                                                href="https://{{$website['url']}}"
+                                            @endif
+                                            target="_blank">{{$website['url']}}</a>
                                         </div>
                                         @endif
                                     @endforeach
@@ -162,6 +220,30 @@
                             <a class="link-{{$text}}" href="{{$vcard->map}}" target="_blank">{{$vcard->map}}</a>
                         </div>
                     @endif
+
+                    <div class="mb-3 ">
+                        <hr>
+                        <p class="text-center fs-5">Share Your Contact With Me</p>
+                        <div class="d-flex flex-row  flex-wrap justify-content-evenly bd-highlight mb-3">
+                        @foreach ($websites as $website)
+                            @if($website['type'] == 'WhatsApp' )    
+                                <a
+                                @if (str_contains($website['url'],'https://') || str_contains($website['url'],'http://'))
+                                    href="{{$website['url']}}"
+                                @else    
+                                    href="https://{{$website['url']}}"
+                                @endif
+                                target="_blank" class="card-link link-{{$text}} fs-2 d-inline-block social-links"><i class="bi bi-whatsapp"></i>
+                                </a>
+                            @endif 
+                        @endforeach
+
+                        @if ($emails)
+                           <a class=" card-link link-{{$text}} fs-2 d-inline-block social-links" href="mailto:{{$emails[0]['address']}}"><i class="bi bi-envelope"></i></a>
+                        @endif
+                        
+                    </div>
+                    </div>
                     
                     {{-- qrcode model  --}}
                     <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -173,7 +255,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="text-center">
-                                    <img src="{{ asset('/qrcode/'.$vcard->qr_name) }}" alt="qrcode">
+                                    <img src="{{ asset('/qrcode/'.$vcard->qr_name) }}" class="img-thumbnail" alt="qrcode">
                                 </div>
                             </div>
                             <div class="modal-footer">

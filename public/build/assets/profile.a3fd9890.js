@@ -1,1 +1,0 @@
-const r=document.querySelector("#search");r.addEventListener("keyup",function(t){const n=t.target.value.toLowerCase(),o=document.querySelectorAll(".search");Array.from(o).forEach(function(e){e.querySelector(".name").textContent.toLowerCase().indexOf(n)!=-1?e.classList.remove("d-none"):e.classList.add("d-none")})});

@@ -10,7 +10,7 @@
         <div class="row mb-3 ">
           <label for="cardInfo" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="cardInfo" placeholder="Name" aria-required="true" required>
+            <input type="text" class="form-control" name="name" id="cardInfo" placeholder="Name" aria-required="true" required maxlength="20">
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -40,7 +40,6 @@
 
           </div>
         
-  
         <div class="row mb-3 ">
           <label for="title" class="col-sm-2 col-form-label">Job Title</label>
           <div class="col-sm-10">
@@ -65,9 +64,9 @@
         </div>
 
         <div class="row mb-3">
-          <label for="Company Name" class="col-sm-2 col-form-label">Company Name</label>
+          <label for="Company Name" class="col-sm-2 col-form-label">Organization Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="Company Name" placeholder="Organization Name" name="organization_name">
+            <input type="text" class="form-control" id="Company Name" placeholder="Organization Name" name="organization_name" maxlength="50">
             <div class="valid-feedback">
               Looks Good
             </div>

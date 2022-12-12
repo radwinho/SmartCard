@@ -26,6 +26,8 @@ return new class extends Migration
             $table->mediumText('website')->nullable();
             $table->mediumText('address')->nullable();
             $table->string('image')->nullable();
+            $table->integer('download_counter')->default(0);
+            $table->string('qr_name')->nullable();
             $table->string('note')->nullable();
             $table->string('link');
 

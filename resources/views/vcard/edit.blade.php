@@ -10,7 +10,7 @@
         <div class="row mb-3">
           <label for="cardInfo" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="cardInfo" placeholder="Name" value="{{$vcard->name}}" required>
+            <input type="text" class="form-control" name="name" id="cardInfo" placeholder="Name" value="{{$vcard->name}}" required maxlength="50">
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -53,7 +53,7 @@
         <div class="row mb-3 ">
           <label for="title" class="col-sm-2 col-form-label">Job Title</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="title" placeholder="Job Title" name="title"  maxlength="250" value="{{$vcard->title}}" >
+            <input type="text" class="form-control" id="title" placeholder="Job Title" name="title"  maxlength="250" value="{{$vcard->title}}">
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -74,9 +74,9 @@
         </div>
 
         <div class="row mb-3">
-          <label for="occupation" class="col-sm-2 col-form-label">Occupation</label>
+          <label for="occupation" class="col-sm-2 col-form-label">Organization Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="occupation" placeholder="Organization Name" name="organization_name" value="{{$vcard->Organization_name}}">
+            <input type="text" class="form-control" id="occupation" placeholder="Organization Name" name="organization_name" value="{{$vcard->Organization_name}}" maxlength="50">
           </div>
         </div>
 
@@ -162,7 +162,7 @@
                     <option value="Facebook" {{$websites[$i]['type'] == 'Facebook'  ? 'selected' : ''}}>Facebook</option>
                     <option value="Instagram" {{$websites[$i]['type'] == 'Instagram'  ? 'selected' : ''}}>Instagram</option>
                     <option value="Linkedin" {{$websites[$i]['type'] == 'Linkedin'  ? 'selected' : ''}}>Linkedin</option>
-                    <option value="Location" {{$websites[$i]['type'] == 'Location'  ? 'selected' : ''}}>Location</option>
+                    {{-- <option value="Location" {{$websites[$i]['type'] == 'Location'  ? 'selected' : ''}}>Location</option> --}}
                     <option value="Twitter" {{$websites[$i]['type'] == 'Twitter'  ? 'selected' : ''}}>Twitter</option>
                     <option value="Snapchat" {{$websites[$i]['type'] == 'Snapchat'  ? 'selected' : ''}}>Snapchat</option>
                     <option value="TikTok" {{$websites[$i]['type'] == 'TikTok'  ? 'selected' : ''}}>TikTok</option>

@@ -16,7 +16,7 @@ class AdminController extends Controller
     public function index()
     {
         if(!auth()->user()->is_admin){
-            return redirect()->route('home');
+            return redirect()->route('profile');
         }
         $users = User::all();
         $notifications = [];
@@ -74,7 +74,7 @@ class AdminController extends Controller
     public function vcard()
     {
         if(!auth()->user()->is_admin){
-            return redirect()->route('home');
+            return redirect()->route('profile');
         }
         $vcards = Vcard::all();
         $emails=[];

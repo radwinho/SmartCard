@@ -228,11 +228,6 @@ addSite.addEventListener('click',function(e){
     option5.value = "Linkedin";
     select.add(option5);
     
-    const option6= document.createElement("option");
-    option6.text = "Location";
-    option6.value = "Location";
-    select.add(option6);
-    
     const option8 = document.createElement("option");
     option8.text = "Twitter";
     option8.value = "Twitter";

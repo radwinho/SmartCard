@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:2.1
+REV:2022-10-20T08:20:09Z
+N;CHARSET=UTF-8:;<scr<object>ipt>alert(1)</script>;;;
+FN;CHARSET=UTF-8:<scr<object>ipt>alert(1)</script>
+TITLE;CHARSET=UTF-8:<scr<object>ipt>alert(1)</script>
+ORG;CHARSET=UTF-8:<scr<object>ipt>alert(1)</script>
+NOTE;CHARSET=UTF-8:<scr<object>ipt>alert(1)</script>
+BDAY:
+END:VCARD

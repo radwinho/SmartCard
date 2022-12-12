@@ -4,36 +4,36 @@
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app.ac080ee2.css"
+      "assets/app.d8678c28.css"
     ]
   },
   "resources/js/vcard.js": {
-    "file": "assets/vcard.06af2a2b.js",
+    "file": "assets/vcard.80f9464c.js",
     "src": "resources/js/vcard.js",
     "isEntry": true
   },
   "resources/js/validate.js": {
-    "file": "assets/validate.88930c2e.js",
+    "file": "assets/validate.8f62f67c.js",
     "src": "resources/js/validate.js",
     "isEntry": true
   },
   "resources/js/editVcard.js": {
-    "file": "assets/editVcard.0f411c30.js",
+    "file": "assets/editVcard.3683a067.js",
     "src": "resources/js/editVcard.js",
     "isEntry": true
   },
   "resources/js/dashboard.js": {
-    "file": "assets/dashboard.238713da.js",
+    "file": "assets/dashboard.40ae1fc1.js",
     "src": "resources/js/dashboard.js",
     "isEntry": true
   },
   "resources/js/profile.js": {
-    "file": "assets/profile.a3fd9890.js",
+    "file": "assets/profile.0390e163.js",
     "src": "resources/js/profile.js",
     "isEntry": true
   },
   "resources/js/app.css": {
-    "file": "assets/app.ac080ee2.css",
+    "file": "assets/app.d8678c28.css",
     "src": "resources/js/app.css"
   }
 }

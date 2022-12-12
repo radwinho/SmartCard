@@ -63,7 +63,7 @@ class VcardController extends Controller
         }
         
         $this->validate($request ,[
-            'image' => 'image|max:1024'
+            'image' => 'image|max:300'
         ]);
         $info_all= $request->all();
         // phone 
@@ -169,7 +169,7 @@ class VcardController extends Controller
         }
 
         $link = time().'-'.rand();
-        $qr_name =$request->name.rand().'.svg';
+        $qr_name =$request->name.rand().'.png';
 
             Vcard::create([
                 'id'=>rand(),
@@ -188,7 +188,7 @@ class VcardController extends Controller
                 'link'=>$link
             ]);
 
-            QrCode::generate('https://anasmartcard.net/download/'.$link, public_path('/qrcode/'.$qr_name));
+            QrCode::format('png')->size(400)->generate('https://anasmartcard.net/download/'.$link, public_path('/qrcode/'.$qr_name));
             
             $vcard = new card();
 
@@ -338,7 +338,7 @@ class VcardController extends Controller
     public function update(Request $request, Vcard $vcard)
     {
         $this->validate($request ,[
-            'image' => 'image|max:1024'
+            'image' => 'image|max:300'
         ]);
         $info_all= $request->all();
         // phone 
@@ -610,9 +610,9 @@ class VcardController extends Controller
         foreach($vcards as $vcard):
             if(!$vcard->qr_name):
                 $counter++;
-                $qr_name = $vcard->name.rand().'.svg';
+                $qr_name = $vcard->name.rand().'.png';
                 Vcard::where("id", $vcard->id)->update(["qr_name" => $qr_name]);
-                QrCode::generate('https://anasmartcard.net/download/'.$vcard->link, public_path('/qrcode/'.$qr_name));
+                QrCode::format('png')->size(400)->generate('https://anasmartcard.net/download/'.$vcard->link, public_path('/qrcode/'.$qr_name));
             endif;
         endforeach;
         dd($counter.' qrCode are Created'); 
